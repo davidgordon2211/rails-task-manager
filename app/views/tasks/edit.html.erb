@@ -1,0 +1,24 @@
+<%= form_for(@task) do |f| %>
+<div class="container">
+
+  <div class="form-group" class="form-inline">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group" class="form-inline">
+    <%= f.label :details %>
+    <%= f.text_field :details, class: 'form-control' %>
+  </div>
+
+  <div class="form-group" class="form-inline">
+    <%= f.label :completed %>
+    <%= f.check_box :completed, class: 'form-control' %>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary' %>
+  <%= link_to "Back To Tasks", tasks_path, class: 'btn btn-info' %>
+<% end %>
+</div>
+
+
